@@ -18,11 +18,9 @@ public class BookstoreApplication {
 	@Bean
 	public CommandLineRunner book(BookRepository repository) {
 		return (args) -> {
-			repository.save(new Book( "Book1", "ISBN1", 0, null, 0, null));
-			repository.save(new Book( "Book2", "ISBN2", 0, null, 0, null));
-
+			repository.save(new Book("Book1", "Author1", 2023, "ISBN1", 19.90));
+			repository.save(new Book("Book2", "Author2", 2023, "ISBN2", 24.90));
 		};
-		
 	}
 
 }
