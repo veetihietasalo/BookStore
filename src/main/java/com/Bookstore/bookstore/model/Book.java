@@ -16,10 +16,12 @@ public class Book {
 	private int publicationYear;
 	private String isbn;
 	private double price;
-	
-	public Book(String title, String author, int publicationYear, String isbn, double price, Long id) {
-		super();
-		this.id = id;
+
+	// JPA needs a no-arg constructor to load books from the database
+	protected Book() {
+	}
+
+	public Book(String title, String author, int publicationYear, String isbn, double price) {
 		this.title = title;
 		this.author = author;
 		this.publicationYear = publicationYear;
